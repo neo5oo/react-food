@@ -1,11 +1,16 @@
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 
 function CategoryItem(props) {
-  const { idCategory, strCategory, strCategoryThumb, strCategoryDescription } =
-    props;
+  const {
+    // idCategory,
+    strCategory,
+    strCategoryThumb,
+    strCategoryDescription,
+  } = props;
+
   return (
     <div className="card">
-      <div classNameName="card-image">
+      <div className="card-image">
         <img src={strCategoryThumb} alt={strCategory} />
       </div>
       <div className="card-content">
