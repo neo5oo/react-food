@@ -10,22 +10,24 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { NotFound } from "./pages/NotFound";
+import { Movie } from "./pages/Movie";
 
 function App() {
   return (
     <>
-      <Header />
-      <main className="container content">
-        <Router>
+      <Router>
+        <Header />
+        <main className="container content">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/contacts" component={Contact} />
+            <Route path="/movies/:id" component={Movie} />
             <Route component={NotFound} />
           </Switch>
-        </Router>
-      </main>
-      <Footer />
+        </main>
+        <Footer />
+      </Router>
     </>
   );
 }

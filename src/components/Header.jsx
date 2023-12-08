@@ -1,19 +1,18 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 function Header() {
   return (
     <nav className="indigo lighten-2">
       <div className="nav-wrapper">
-        <a href="/" className="brand-logo">
+        <Link to="/" className="brand-logo">
           React Shop
-        </a>
+        </Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
-            <a
-              href="https://neo5oo.github.io/react-shop/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Repo
-            </a>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contacts">Contacts</Link>
           </li>
         </ul>
       </div>
